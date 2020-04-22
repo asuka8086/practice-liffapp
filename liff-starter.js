@@ -1,8 +1,10 @@
 (() => {
+  const path = location.pathname;
+  const liffId = path.match(/^\/[^\/?#]+/)[0].replace('/', '');
   const app = document.getElementById('app');
   app.textContent = 'hello,\n';
 
-  liff.init().then((e) => {
+  liff.init({ liffId }).then((e) => {
     app.textContent += e;
     if (liff.isLoggedIn()) {
       liff.login();
