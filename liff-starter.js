@@ -6,11 +6,11 @@
 
   liff.init({ liffId }).then((e) => {
     app.textContent += e;
-    if (liff.isLoggedIn()) {
-      liff.login();
-    } else {
-      return;
-    }
+    // if (liff.isLoggedIn()) {
+    //   liff.login();
+    // } else {
+    //   return;
+    // }
 
     app.textContent += '\nlanguage:';
     app.textContent += liff.getLanguage();
