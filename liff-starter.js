@@ -3,6 +3,8 @@
   const liffId = path.match(/^\/[^\/?#]+/)[0].replace('/', '');
   const app = document.getElementById('app');
   app.textContent = 'hello,\n';
+  app.textContent += liffId;
+  return;
 
   liff.init({ liffId }).then((e) => {
     app.textContent += e;
